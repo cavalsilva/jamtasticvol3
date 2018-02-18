@@ -1,0 +1,63 @@
+﻿[
+  {
+    "ID": "0",
+    "type": "0",
+    "dialog": "Oi!",
+    "answers": [
+      {
+        "answer": "Olá!",
+        "callID": "1"
+      }
+    ]
+  },
+  {
+    "ID": "1",
+    "dialog": "Como vai?",
+    "answers": [
+      {
+        "answer": "Bem! e você?",
+        "callID": "3"
+      },
+      {
+        "answer": "Nada bem. =(",
+        "callID": "2"
+      }
+    ]
+  },
+  {
+    "ID": "2",
+    "dialog": "Bom, problema seu.",
+    "answers": [
+      {
+        "answer": "Mussum Ipsum, cacilds vidis litro abertis!",
+        "callID": "3"
+      },
+      {
+        "answer": "Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.",
+        "callID": "3"
+      },
+      {
+        "answer": "Si u mundo tá muito paradis?",
+        "callID": "3"
+      }
+    ]
+  },
+  {
+    "ID": "3",
+    "dialog": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.\nPra lá , depois divoltis porris, paradis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!",
+    "answers": [
+      {
+        "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
+        "callID": "0"
+      },
+      {
+        "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
+        "callID": "0"
+      },
+      {
+        "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
+        "callID": "0"
+      }
+    ]
+  }
+]
