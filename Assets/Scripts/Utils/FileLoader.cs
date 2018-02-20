@@ -12,6 +12,7 @@ namespace jamtasticvol3.Utils
         static bool _started = false;
 
         static string _dataFolder = "Data";
+        static string dataFolder = "";
         static Dictionary<FileType, string> _files = new Dictionary<FileType, string>()
         {
             { FileType.Dialogs, "dialogs.json" }
@@ -25,6 +26,7 @@ namespace jamtasticvol3.Utils
             _started = true;
 
 #if UNITY_IOS || UNITY_ANDROID
+        //dataFolder = Application.persistentDataPath + "/" + dataFolder;
         dataFolder = Application.persistentDataPath + "/" + dataFolder;
 #endif
 
