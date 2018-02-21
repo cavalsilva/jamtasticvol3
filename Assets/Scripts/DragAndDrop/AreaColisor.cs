@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class AreaColisor : MonoBehaviour {
 
+    Collider2D myCollider;
+    int numColliders = 1;
+
+    private void Awake()
+    {
+        myCollider = gameObject.GetComponent<Collider2D>();
+    }
+
     void Update () {
-        Collider2D myCollider = gameObject.GetComponent<Collider2D>();
-
-        //Quantidade máxima de colisores que podem colidir com o objeto
-        int numColliders = 10;
-
         Collider2D[] colliders = new Collider2D[numColliders];
         ContactFilter2D contactFilter = new ContactFilter2D();
 
