@@ -17,6 +17,8 @@ public class AreaColisor : MonoBehaviour
 
     bool _canSpawn = true;
 
+    public GameManager.AreaColisor areaColisor;
+
     private void Awake()
     {
         _transform = GetComponent<Transform>();
