@@ -4,6 +4,7 @@ using UnityEngine;
 using TouchScript.Gestures;
 using TouchScript.Gestures.TransformGestures;
 using TouchScript.Behaviors;
+using DG.Tweening;
 
 public class AreaColisor : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class AreaColisor : MonoBehaviour
 
     Collider2D myCollider;
     int numColliders = 1;
-
-    bool _beingHeld = false;
 
     TransformGesture _gesture;
 
@@ -43,19 +42,18 @@ public class AreaColisor : MonoBehaviour
     void StartDrag()
     {
         Debug.Log("Drag Start: " + gameObject.name);
-        _beingHeld = true;
+        _transform.DOScale(Vector3.one * 1.2f, 0.5f).SetEase(Ease.OutElastic).Play();
     }
 
     void StopDrag()
     {
         Debug.Log("Drag Stop: " + gameObject.name);
-        _beingHeld = false;
 
         Collider2D[] colliders = new Collider2D[numColliders];
         ContactFilter2D contactFilter = new ContactFilter2D();
         contactFilter.SetLayerMask(1 << LayerMask.NameToLayer("DropArea"));
 
-        int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
-        Debug.Log(colliderCount);
+        if (myCollider.OverlapCollider(contactFilter, colliders) < 1)
+            GameObject.Destroy(gameObject);
     }
 }
