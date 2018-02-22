@@ -66,6 +66,6 @@ public class AreaColisor : MonoBehaviour
         contactFilter.SetLayerMask(1 << LayerMask.NameToLayer("DropArea"));
 
         if (myCollider.OverlapCollider(contactFilter, colliders) < 1)
-            GameObject.Destroy(gameObject);
+            _transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => GameObject.Destroy(gameObject)).Play();
     }
 }
