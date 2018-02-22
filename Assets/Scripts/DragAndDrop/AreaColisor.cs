@@ -14,30 +14,41 @@ public class AreaColisor : MonoBehaviour
 
     bool _beingHeld = false;
 
-
-    PressGesture _press;
-    ReleaseGesture _release;
+    TransformGesture _gesture;
 
     private void Awake()
     {
         _transform = GetComponent<Transform>();
         myCollider = gameObject.GetComponent<Collider2D>();
 
-        _press = GetComponent<PressGesture>();
-        _press.OnPress.AddListener(StartDrag);
-
-        _release = GetComponent<ReleaseGesture>();
-        _release.OnRelease.AddListener(StopDrag);
+        _gesture = GetComponent<TransformGesture>();
+        _gesture.StateChanged += OnGestureChange;
     }
 
-    void StartDrag(Gesture gesture)
+    void OnGestureChange(object sender, GestureStateChangeEventArgs e)
     {
-        Debug.Log("Drag Start");
+        switch(e.State)
+        {
+            case Gesture.GestureState.Began:
+                StartDrag();
+                break;
+            case Gesture.GestureState.Ended:
+                StopDrag();
+                break;
+            default:
+                break;
+        }
+    }
+
+    void StartDrag()
+    {
+        Debug.Log("Drag Start: " + gameObject.name);
         _beingHeld = true;
     }
 
-    void StopDrag(Gesture gesture)
+    void StopDrag()
     {
+        Debug.Log("Drag Stop: " + gameObject.name);
         _beingHeld = false;
 
         Collider2D[] colliders = new Collider2D[numColliders];
@@ -46,16 +57,5 @@ public class AreaColisor : MonoBehaviour
 
         int colliderCount = myCollider.OverlapCollider(contactFilter, colliders);
         Debug.Log(colliderCount);
-    }
-
-    private void Update()
-    {
-        if(_beingHeld)
-        {
-            Vector2 mousePos = Input.mousePosition;
-
-            _transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        }
     }
 }
