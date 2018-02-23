@@ -9,15 +9,20 @@ using DG.Tweening;
 public class AreaColisor : MonoBehaviour
 {
     Transform _transform;
-
+    SpriteRenderer _spriteRenderer;
     Collider2D myCollider;
     int numColliders = 1;
 
     TransformGesture _gesture;
 
+    bool _canSpawn = true;
+
+    public GameManager.AreaColisor areaColisor;
+
     private void Awake()
     {
         _transform = GetComponent<Transform>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         myCollider = gameObject.GetComponent<Collider2D>();
 
         _gesture = GetComponent<TransformGesture>();
@@ -42,6 +47,15 @@ public class AreaColisor : MonoBehaviour
     void StartDrag()
     {
         Debug.Log("Drag Start: " + gameObject.name);
+
+        if (_canSpawn)
+        {
+            _canSpawn = false;
+            Instantiate(gameObject);
+
+            _spriteRenderer.enabled = true;
+        }
+
         _transform.DOScale(Vector3.one * 1.2f, 0.5f).SetEase(Ease.OutElastic).Play();
     }
 
@@ -54,6 +68,6 @@ public class AreaColisor : MonoBehaviour
         contactFilter.SetLayerMask(1 << LayerMask.NameToLayer("DropArea"));
 
         if (myCollider.OverlapCollider(contactFilter, colliders) < 1)
-            GameObject.Destroy(gameObject);
+            _transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => GameObject.Destroy(gameObject)).Play();
     }
 }
