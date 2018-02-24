@@ -18,6 +18,7 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 4440349993895056}
   - component: {fileID: 212411489732204560}
   - component: {fileID: 61755700040478996}
@@ -25,6 +26,14 @@ GameObject:
   - component: {fileID: 114250942553280306}
   - component: {fileID: 114577226409211074}
   - component: {fileID: 114272950465783044}
+=======
+  - component: {fileID: 4582248941411494}
+  - component: {fileID: 212788533867087234}
+  - component: {fileID: 61812704293659668}
+  - component: {fileID: 114175821675636320}
+  - component: {fileID: 114879499049255502}
+  - component: {fileID: 114848815968544596}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Objeto1
   m_TagString: Untagged
@@ -87,12 +96,33 @@ MonoBehaviour:
   rotationThreshold: 0.1
   scaleThreshold: 0.01
   allowChangingFromOutside: 0
+<<<<<<< Updated upstream
 --- !u!114 &114250942553280306
+=======
+--- !u!114 &114848815968544596
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 1398613986745676}
+=======
+  m_GameObject: {fileID: 1904919404985956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca290b8519774eb488ff372c9f447340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xxx: 1
+  areaColisor: 0
+--- !u!114 &114879499049255502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904919404985956}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11ea9930ecb674732bee27116520fad8, type: 3}
