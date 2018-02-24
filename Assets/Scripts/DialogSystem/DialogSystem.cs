@@ -14,7 +14,6 @@ namespace jamtasticvol3.DialogSystem
         public RectTransform dialogsContainer;
         public GameObject containerPrefab;
 
-
         List<Dialog> _dialogs;
 
         void Start()
@@ -31,6 +30,9 @@ namespace jamtasticvol3.DialogSystem
 
             DialogEntry de = Instantiate(containerPrefab, dialogsContainer).GetComponent<DialogEntry>();
             de.Init(newDialog);
+
+            if (newDialog.type == Dialog.DialogType.Start)
+                GameManager.Instance.NewMask();
 
             if (!string.IsNullOrEmpty(newDialog.character))
             {

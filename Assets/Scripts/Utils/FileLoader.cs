@@ -15,7 +15,7 @@ namespace jamtasticvol3.Utils
         static string dataFolder = "";
         static Dictionary<FileType, string> _files = new Dictionary<FileType, string>()
         {
-            { FileType.Dialogs, "dialogs.json" }
+            { FileType.Dialogs, "dialogs" }
         };
 
         static void Init()
@@ -25,7 +25,7 @@ namespace jamtasticvol3.Utils
 
             _started = true;
 
-#if UNITY_IOS || UNITY_ANDROID
+/*#if UNITY_IOS || UNITY_ANDROID
         //dataFolder = Application.persistentDataPath + "/" + dataFolder;
         dataFolder = Application.persistentDataPath + "/" + dataFolder;
 #endif
@@ -34,14 +34,16 @@ namespace jamtasticvol3.Utils
             {
                 Directory.CreateDirectory(_dataFolder);
                 File.SetAttributes(_dataFolder, FileAttributes.Normal);
-            }
+            }*/
         }
 
         public static string LoadFile(FileType type)
         {
             Init();
 
-            string path = _dataFolder + "/" + _files[FileType.Dialogs];
+            string t = Resources.Load<TextAsset>(_files[FileType.Dialogs]).text;
+
+            /*string path = _dataFolder + "/" + _files[FileType.Dialogs];
             string t = "";
 
             if (File.Exists(path))
@@ -52,7 +54,7 @@ namespace jamtasticvol3.Utils
                 Debug.LogError("File at " + path + " not found!");
 
             if(t == "")
-                Debug.LogError("File at " + path + " is empty!");
+                Debug.LogError("File at " + path + " is empty!");*/
 
             return t;
         }
