@@ -1,6 +1,8 @@
 ﻿[
   {
     "ID": "0",
+    "character": "Biba",
+    "mood": "Normal",
     "type": "0",
     "dialog": "Oi!",
     "answers": [
@@ -12,6 +14,8 @@
   },
   {
     "ID": "1",
+    "character": "Biba",
+    "mood": "Happy",
     "dialog": "Como vai?",
     "answers": [
       {
@@ -26,6 +30,8 @@
   },
   {
     "ID": "2",
+    "character": "Biba",
+    "mood": "Angry",
     "dialog": "Bom, problema seu.",
     "answers": [
       {
@@ -44,18 +50,46 @@
   },
   {
     "ID": "3",
+    "character": "Biba",
+    "mood": "Sad",
     "dialog": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.\nPra lá , depois divoltis porris, paradis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!",
     "answers": [
       {
         "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
-        "callID": "0"
+        "callID": "4"
       },
       {
         "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
-        "callID": "0"
+        "callID": "4"
       },
       {
         "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
+        "callID": "4"
+      }
+    ]
+  },
+  {
+    "ID": "4",
+    "character": "Biba",
+    "mood": "Sad",
+    "dialog": "Mussum Ipsum!",
+    "callID": "5"
+  },
+  {
+    "ID": "5",
+    "character": "Biba",
+    "mood": "Happy",
+    "dialog": "Mussum Ipsum...",
+    "callID": "6"
+  },
+  {
+    "ID": "6",
+    "character": "NotBiba",
+    "mood": "Normal",
+    "dialog": "Hãaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.",
+    "answers": [
+      {
+        "answer": "Oi? Quem é você?",
         "callID": "0"
       }
     ]

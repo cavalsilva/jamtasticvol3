@@ -1,4 +1,5 @@
-﻿using jamtasticvol3.Utils;
+﻿using jamtasticvol3.Characters;
+using jamtasticvol3.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,7 +31,27 @@ namespace jamtasticvol3.DialogSystem
 
             DialogEntry de = Instantiate(containerPrefab, dialogsContainer).GetComponent<DialogEntry>();
             de.Init(newDialog);
+
+            if (!string.IsNullOrEmpty(newDialog.character))
+            {
+                CharacterManager.Instance.ShowCharacter(newDialog.character);
+
+                if (!string.IsNullOrEmpty(newDialog.mood))
+                    CharacterManager.Instance.SetCharacterMood(newDialog.character, (Dialog.Mood)Enum.Parse(typeof(Dialog.Mood), newDialog.mood));
+            }
         }
+
+        public void DelayedCallDialog(string id)
+        {
+            StartCoroutine(_DelayedCallDialog(id));
+        }
+        IEnumerator _DelayedCallDialog(string id)
+        {
+            yield return new WaitForSeconds(3f);
+
+            CallDialog(id);
+        }
+
 
         public void TestDialog()
         {
@@ -44,11 +65,15 @@ namespace jamtasticvol3.DialogSystem
     public class Dialog
     {
         public enum DialogType { Start = 0, Default = 1}
+        public enum Mood { Normal, Happy, Sad, Angry }
 
         public string ID;
+        public string character;
+        public string mood;
         public DialogType type = DialogType.Default;
         public string dialog;
         public List<Answer> answers;
+        public string callID;
     }
 
     [Serializable]

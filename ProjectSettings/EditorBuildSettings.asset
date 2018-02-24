@@ -6,8 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/MenuTest.unity
-    guid: 92662f50fcb37cd42b105f3b92bfd07d
-  - enabled: 1
-    path: Assets/_Scenes/DragAndDropTest.unity
-    guid: 71cb37d5926185a439c61b50c0ed044e
+    path: Assets/_Scenes/DialogTest.unity
+    guid: c322b467f8dfb444b86aeac4457556e3

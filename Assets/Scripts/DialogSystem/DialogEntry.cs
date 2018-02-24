@@ -48,11 +48,17 @@ namespace jamtasticvol3.DialogSystem
         IEnumerator _AnimatedDialog()
         {
             int count = 0;
+            bool callNext = true;
 
-            for (int i = 0; i < _dialog.answers.Count; i++)
+            if (_dialog.answers != null && _dialog.answers.Count > 0)
             {
-                DialogAnswer da = Instantiate(answerPrefab, answersContainer).GetComponent<DialogAnswer>();
-                da.Init(_dialog.answers[i], i);
+                callNext = false;
+
+                for (int i = 0; i < _dialog.answers.Count; i++)
+                {
+                    DialogAnswer da = Instantiate(answerPrefab, answersContainer).GetComponent<DialogAnswer>();
+                    da.Init(_dialog.answers[i], i);
+                }
             }
             
             LayoutRebuilder.ForceRebuildLayoutImmediate(_rectTransform);
@@ -70,21 +76,26 @@ namespace jamtasticvol3.DialogSystem
                 if (count >= _dialog.dialog.Length)
                     break;
 
-                yield return new WaitForSeconds(0.025f);
+                yield return new WaitForSeconds(0.015f);
 
                 yield return new WaitForEndOfFrame();
                 scroll.normalizedPosition = Vector2.zero;
             }
 
-            float time = 0f;
-            float duration = 1.5f;
-            while (time < duration)
+            if (callNext)
+                DialogSystem.Instance.DelayedCallDialog(_dialog.callID);
+            else
             {
-                time += Time.deltaTime;
+                float time = 0f;
+                float duration = 1.5f;
+                while (time < duration)
+                {
+                    time += Time.deltaTime;
 
-                _answersCV.alpha = time / duration;
+                    _answersCV.alpha = time / duration;
 
-                yield return null;
+                    yield return null;
+                }
             }
         }
     }
