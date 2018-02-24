@@ -8,7 +8,7 @@ namespace jamtasticvol3.Characters
 {
     public class Character : MonoBehaviour
     {
-        public Sprite normal, happy, sad, angry;
+        public Sprite normal, happy, sad, angry, special;
 
         Image _image;
 
@@ -23,7 +23,8 @@ namespace jamtasticvol3.Characters
                 { Dialog.Mood.Normal, normal },
                 { Dialog.Mood.Happy, happy },
                 { Dialog.Mood.Sad, sad },
-                { Dialog.Mood.Angry, angry }
+                { Dialog.Mood.Angry, angry },
+                { Dialog.Mood.Special, special }
             };
 
             CharacterManager.Instance.AddCharacter(name, this);

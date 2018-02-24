@@ -4,6 +4,8 @@ namespace jamtasticvol3.Utils
 {
     public class Singleton<T> : MonoBehaviour where T : Component
     {
+        public bool dontDestroyOnLoad = false;
+
         private static T instance;
         public static T Instance
         {
@@ -28,7 +30,9 @@ namespace jamtasticvol3.Utils
             if (instance == null)
             {
                 instance = this as T;
-                DontDestroyOnLoad(this.gameObject);
+
+                if(dontDestroyOnLoad)
+                    DontDestroyOnLoad(this.gameObject);
             }
             else
             {

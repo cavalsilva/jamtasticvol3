@@ -1,4 +1,5 @@
 ﻿using jamtasticvol3.Characters;
+using jamtasticvol3.Menu;
 using jamtasticvol3.Utils;
 using System;
 using System.Collections;
@@ -22,9 +23,15 @@ namespace jamtasticvol3.DialogSystem
             json = "{\"Items\":" + json + "}";
 
             _dialogs = JsonHelper.FromJson<Dialog>(json).ToList();
+
+            GameUIManager.Instance.CloseDialog();
         }
 
         public void CallDialog(string id)
+        {
+            GameUIManager.Instance.OpenDialog(() => _CallDialog(id));
+        }
+        public void _CallDialog(string id)
         {
             Dialog newDialog = _dialogs.Find(x => x.ID == id);
 
@@ -67,7 +74,7 @@ namespace jamtasticvol3.DialogSystem
     public class Dialog
     {
         public enum DialogType { Start = 0, Default = 1}
-        public enum Mood { Normal, Happy, Sad, Angry }
+        public enum Mood { Normal, Happy, Sad, Angry, Special }
 
         public string ID;
         public string character;

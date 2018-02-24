@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using jamtasticvol3.Utils;
+using DG.Tweening;
 
 namespace jamtasticvol3.DialogSystem
 {
@@ -85,18 +86,7 @@ namespace jamtasticvol3.DialogSystem
             if (callNext)
                 DialogSystem.Instance.DelayedCallDialog(_dialog.callID);
             else
-            {
-                float time = 0f;
-                float duration = 1.5f;
-                while (time < duration)
-                {
-                    time += Time.deltaTime;
-
-                    _answersCV.alpha = time / duration;
-
-                    yield return null;
-                }
-            }
+                _answersCV.DOFade(1f, 1.5f).Play();
         }
     }
 }
