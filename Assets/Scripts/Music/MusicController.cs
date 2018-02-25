@@ -20,6 +20,9 @@ public class MusicController : Singleton<MusicController>
 
     private void Update()
     {
+        if (!audioSource.enabled)
+            return;
+
         if (!audioSource.isPlaying)
         {
             indexAudio += 1;
