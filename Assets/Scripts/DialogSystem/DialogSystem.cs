@@ -35,18 +35,26 @@ namespace jamtasticvol3.DialogSystem
         {
             Dialog newDialog = _dialogs.Find(x => x.ID == id);
 
-            DialogEntry de = Instantiate(containerPrefab, dialogsContainer).GetComponent<DialogEntry>();
-            de.Init(newDialog);
-
-            if (newDialog.type == Dialog.DialogType.Start)
-                GameManager.Instance.NewMask();
-
-            if (!string.IsNullOrEmpty(newDialog.character))
+            switch(newDialog.type)
             {
-                CharacterManager.Instance.ShowCharacter(newDialog.character);
+                case Dialog.DialogType.End:
+                    GameManager.Instance.NewMask();
+                    break;
+                case Dialog.DialogType.Start:
+                case Dialog.DialogType.Default:
+                    DialogEntry de = Instantiate(containerPrefab, dialogsContainer).GetComponent<DialogEntry>();
+                    de.Init(newDialog);
 
-                if (!string.IsNullOrEmpty(newDialog.mood))
-                    CharacterManager.Instance.SetCharacterMood(newDialog.character, (Dialog.Mood)Enum.Parse(typeof(Dialog.Mood), newDialog.mood));
+                    if (!string.IsNullOrEmpty(newDialog.character))
+                    {
+                        CharacterManager.Instance.ShowCharacter(newDialog.character);
+
+                        if (!string.IsNullOrEmpty(newDialog.mood))
+                            CharacterManager.Instance.SetCharacterMood(newDialog.character, (Dialog.Mood)Enum.Parse(typeof(Dialog.Mood), newDialog.mood));
+                    }
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -68,12 +76,18 @@ namespace jamtasticvol3.DialogSystem
 
             CallDialog(t.Find(x => x.ID == UnityEngine.Random.Range(0, t.Count).ToString()).ID);
         }
+
+        public void ClearDialogs()
+        {
+            for (int i = 0; i < dialogsContainer.childCount; i++)
+                Destroy(dialogsContainer.GetChild(i).gameObject);
+        }
     }
 
     [Serializable]
     public class Dialog
     {
-        public enum DialogType { Start = 0, Default = 1}
+        public enum DialogType { Start = 0, Default = 1, End = 2 }
         public enum Mood { Normal, Happy, Sad, Angry, Special }
 
         public string ID;

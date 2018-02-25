@@ -15,6 +15,10 @@ namespace jamtasticvol3
     {
         public event Delegates.SimpleEvent OnCollisionDetected, OnNoCollisionDetected;
 
+        public LayerMask layers;
+        public bool snaps;
+        public Vector2 snapTo;
+
         Transform _transform;
         Collider2D _collider;
         Image _image;
@@ -64,7 +68,7 @@ namespace jamtasticvol3
         {
             Collider2D[] colliders = new Collider2D[numColliders];
             ContactFilter2D contactFilter = new ContactFilter2D();
-            contactFilter.SetLayerMask(1 << LayerMask.NameToLayer("DropArea"));
+            contactFilter.SetLayerMask(layers);
 
             if (_collider.OverlapCollider(contactFilter, colliders) < 1)
             {
@@ -77,6 +81,9 @@ namespace jamtasticvol3
             {
                 if (OnCollisionDetected != null)
                     OnCollisionDetected();
+
+                _transform.SetParent(colliders[0].transform);
+                if(snaps) _transform.localPosition = snapTo;
             }
         }
     }
