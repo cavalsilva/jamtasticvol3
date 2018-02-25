@@ -26,12 +26,16 @@ namespace jamtasticvol3
         int numColliders = 1;
         bool _canSpawn = true;
 
+        RectTransform maskContainer;
+
         private void Awake()
         {
             _transform = GetComponent<Transform>();
             _collider = gameObject.GetComponent<Collider2D>();
             _image = GetComponent<Image>();
             //_image.color = new Color(0f, 0f, 0f, 0f);
+
+            maskContainer = GameObject.Find("MaskContainer").transform as RectTransform;
 
             GetComponent<TransformGesture>().StateChanged += OnGestureChange;
         }
@@ -58,10 +62,11 @@ namespace jamtasticvol3
                 _canSpawn = false;
                 Instantiate(gameObject, gameObject.transform.parent);
 
+                _transform.SetParent(maskContainer);
                 //_image.color = Color.white;
             }
 
-            _transform.DOScale(Vector3.one * 1.2f, 0.5f).SetEase(Ease.OutElastic).Play();
+            ((RectTransform)_transform).DOSizeDelta(Vector2.one * 500f, 0.5f).SetEase(Ease.OutElastic).Play();
         }
 
         void StopDrag()
