@@ -1,25 +1,14 @@
-﻿using System;
+﻿using jamtasticvol3.Utils;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicController : MonoBehaviour {
-
+public class MusicController : Singleton<MusicController>
+{
     public AudioClip[] audioClip;
     private AudioSource audioSource;
     private int indexAudio = 0;
-
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-
-        //Verifica se existe algum duplicado, se sim então exclui
-        if (FindObjectsOfType(GetType()).Length > 1)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     private void Start()
     {
@@ -36,6 +25,11 @@ public class MusicController : MonoBehaviour {
             indexAudio += 1;
             PlayNextClip();
         }
+    }
+
+    public void ToggleMusic(bool toggle)
+    {
+        audioSource.enabled = toggle;
     }
 
     private void PlayNextClip()

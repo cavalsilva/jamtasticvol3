@@ -33,7 +33,6 @@ namespace jamtasticvol3
             _transform = GetComponent<Transform>();
             _collider = gameObject.GetComponent<Collider2D>();
             _image = GetComponent<Image>();
-            //_image.color = new Color(0f, 0f, 0f, 0f);
 
             maskContainer = GameObject.Find("MaskContainer").transform as RectTransform;
 
@@ -63,14 +62,17 @@ namespace jamtasticvol3
                 Instantiate(gameObject, gameObject.transform.parent);
 
                 _transform.SetParent(maskContainer);
-                //_image.color = Color.white;
             }
+
+            SFXController.Instance.PlaySoundDrag();
 
             ((RectTransform)_transform).DOSizeDelta(Vector2.one * 500f, 0.5f).SetEase(Ease.OutElastic).Play();
         }
 
         void StopDrag()
         {
+            SFXController.Instance.PlaySoundClick();
+
             Collider2D[] colliders = new Collider2D[numColliders];
             ContactFilter2D contactFilter = new ContactFilter2D();
             contactFilter.SetLayerMask(layers);

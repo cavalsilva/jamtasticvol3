@@ -8,10 +8,8 @@ namespace jamtasticvol3.Menu
     public class ButtonToggleDialog : MonoBehaviour
     {
         Button _btn;
-        Image _image;
+        public Image image;
         bool _dialogOpen = true;
-
-        public Sprite closeImg, openImg;
 
         private void Start()
         {
@@ -27,16 +25,20 @@ namespace jamtasticvol3.Menu
             GameUIManager.Instance.OnDialogOpen += () =>
             {
                 _dialogOpen = true;
-                _image.sprite = closeImg;
+
+                Color c = image.color;
+                c.a = 0.8f;
+                image.color = c;
             };
 
             GameUIManager.Instance.OnDialogClose += () =>
             {
                 _dialogOpen = false;
-                _image.sprite = openImg;
-            };
 
-            _image = GetComponent<Image>();
+                Color c = image.color;
+                c.a = 1f;
+                image.color = c;
+            };
         }
     }
 }

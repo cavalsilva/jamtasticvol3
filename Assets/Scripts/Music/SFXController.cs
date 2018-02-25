@@ -1,15 +1,16 @@
-﻿using System.Collections;
+﻿using jamtasticvol3.Utils;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SFXController : MonoBehaviour {
-
+public class SFXController : Singleton<SFXController>
+{
     public AudioClip audioClipClick;
     public AudioClip audioClipDrag;
 
     private AudioSource audioSource;
 
-    private void Awake()
+    private void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
