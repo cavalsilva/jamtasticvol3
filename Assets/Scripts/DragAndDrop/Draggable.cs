@@ -31,7 +31,7 @@ namespace jamtasticvol3
             _transform = GetComponent<Transform>();
             _collider = gameObject.GetComponent<Collider2D>();
             _image = GetComponent<Image>();
-            _image.color = new Color(0f, 0f, 0f, 0f);
+            //_image.color = new Color(0f, 0f, 0f, 0f);
 
             GetComponent<TransformGesture>().StateChanged += OnGestureChange;
         }
@@ -58,7 +58,7 @@ namespace jamtasticvol3
                 _canSpawn = false;
                 Instantiate(gameObject, gameObject.transform.parent);
 
-                _image.color = Color.white;
+                //_image.color = Color.white;
             }
 
             _transform.DOScale(Vector3.one * 1.2f, 0.5f).SetEase(Ease.OutElastic).Play();
