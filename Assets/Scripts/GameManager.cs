@@ -47,25 +47,26 @@ namespace jamtasticvol3
 
         public void DeliverMask()
         {
-            int perc = CompareMasks();
+            float perc = CompareMasks();
 
             List<TargetResult> results = gameMasks[currentMask].results;
             results.OrderBy(x => x.result);
 
-            for (int i = 0; i < results.Count - 1; i++)
+            for (int i = 0; i < results.Count; i++)
             {
-                if(perc <= results[i].result)
+                if((int)perc <= results[i].result)
                 {
                     DialogSystem.DialogSystem.Instance.DelayedCallDialog(results[i].callDialogID);
+                    gameMasks[currentMask].finalResult = perc;
                     break;
                 }
             }
         }
 
-        int CompareMasks()
+        float CompareMasks()
         {
             List<Features> features = GetMaskFeatures();
-            int count = 0;
+            float count = 0;
 
             for(int i = 0; i < gameMasks[currentMask].features.Count; i++)
             {
@@ -114,11 +115,12 @@ public class GameMask
     public string startDialogID;
     public List<jamtasticvol3.GameManager.Features> features;
     public List<TargetResult> results;
+    public float finalResult;
 }
 
 [System.Serializable]
 public class TargetResult
 {
-    public float result;
+    public int result;
     public string callDialogID;
 }

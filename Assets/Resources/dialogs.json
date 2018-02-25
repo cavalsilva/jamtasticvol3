@@ -4,10 +4,10 @@
     "character": "Biba",
     "mood": "Normal",
     "type": "0",
-    "dialog": "Oi!",
+    "dialog": "Olá, estava passando em frente e vi esse ateliê... O quê vocês podem me oferecer?",
     "answers": [
       {
-        "answer": "Olá!",
+        "answer": "Olá, Bem-vinda ao nosso pequeno Ateliê, fazemos as mais diversas fantasias com os melhores acessórios e enfeites da região! Tudo confeccionado com produtos sintéticos sem prejudicar nenhum animalzinho! Me diga o que você precisa e faremos o possível para te atender!!",
         "callID": "1"
       }
     ]
@@ -16,15 +16,15 @@
     "ID": "1",
     "character": "Biba",
     "mood": "Happy",
-    "dialog": "Como vai?",
+    "dialog": "Estou bem animada com  carnaval, adoro me divertir pular e brincar, queria aproveitar bastante esse dia",
     "answers": [
       {
-        "answer": "Bem! e você?",
-        "callID": "3"
+        "answer": "E teria algo que eu possa fazer pra manifestar esse seu ânimo em forma de fantasia, me de dicas e tentarei fazer meu melhor",
+        "callID": "2"
       },
       {
-        "answer": "Nada bem. =(",
-        "callID": "2"
+        "answer": "Você tem ctz que está animada?? não me parece tão animada assim",
+        "callID": "200"
       }
     ]
   },
@@ -32,38 +32,25 @@
     "ID": "2",
     "character": "Biba",
     "mood": "Angry",
-    "dialog": "Bom, problema seu.",
-    "answers": [
-      {
-        "answer": "Mussum Ipsum, cacilds vidis litro abertis!",
-        "callID": "3"
-      },
-      {
-        "answer": "Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.",
-        "callID": "3"
-      },
-      {
-        "answer": "Si u mundo tá muito paradis?",
-        "callID": "3"
-      }
-    ]
+    "dialog": "Tem sim, quero a fantasia mais colorida possível, quero pular frevo, dançar cantar, e me divertir, vou para os bloquinhos com meu namorado...uma versão feminina de fantasia seria bem legal. mas ele escolheu a fantasia dele hoje mais cedo. E eu não sei qual é =/, ele não me contou...às vezes acho que ele não me conta muita coisa... ",
+    "callID": "3"
   },
   {
     "ID": "3",
     "character": "Biba",
     "mood": "Sad",
-    "dialog": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.\nPra lá , depois divoltis porris, paradis. Viva Forevis aptent taciti sociosqu ad litora torquent. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!",
+    "dialog": "Uma pena, pq sempre tento contar tudo pra ele gosto muito dele... mas ultimamente ele parece tão diferente. bom vamos deixar isso de lado.",
     "answers": [
       {
-        "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
+        "answer": "Ahh acho que sei quem é seu namorado, ele esteve aqui mais cedo... realmente não sei se ele te conta tudo melhor você prestar mais atenção nisso... não sei se é legal vc ir de par com ele...",
         "callID": "4"
       },
       {
-        "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
+        "answer": "Ta, acho que já entendi do que você precisa, talvez eu consiga te surpreender, mas não aprendi muito de vidência ainda... hahahaha ^^ ",
         "callID": "4"
       },
       {
-        "answer": "Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. Cevadis im ampola pa arma uma pindureta. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.",
+        "answer": "Você parece um pouquinho chateada com seu relacionamento, mas se você não se sente confortável pra falar sobre isso, vamos focar na sua fantasia! ^^",
         "callID": "4"
       }
     ]
@@ -72,7 +59,7 @@
     "ID": "4",
     "character": "Biba",
     "mood": "Sad",
-    "dialog": "Mussum Ipsum!",
+    "dialog": "Ahh quanto a fantasia pode ser criativa me surpreenda! não tem problemas quanto a isso",
     "callID": "5"
   },
   {
@@ -84,7 +71,8 @@
   },
   {
     "ID": "6",
-    "character": "Manu",
+    "type": "2",
+    "character": "Biba",
     "mood": "Normal",
     "dialog": "Hãaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.",
     "answers": [
@@ -93,5 +81,12 @@
         "callID": "0"
       }
     ]
+  },
+  {
+    "ID": "200",
+    "character": "Biba",
+    "mood": "Sad",
+    "dialog": "Estou bem animada sim! Oras, por favor me traga sua fantasia mais colorida!!",
+    "callID": "6"
   }
 ]
