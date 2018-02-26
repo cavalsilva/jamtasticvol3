@@ -41,7 +41,7 @@ namespace jamtasticvol3
             _featuresDict = new Dictionary<string, List<Features>>();
             _flags = new List<Flags>();
 
-            Invoke("StartGame", 2f);
+            StartGame();
         }
 
         void StartGame()
