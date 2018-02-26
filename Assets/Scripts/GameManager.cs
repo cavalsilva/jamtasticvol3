@@ -12,10 +12,7 @@ namespace jamtasticvol3
         public enum Features
         {
             Red, Orange, Yellow, Green, Cyan, Blue, Purple,
-            Feathers,
-            Glitter,
-            Bones,
-            Piercings
+            Feathers, Glitter, Jewels
         }
 
         public List<GameMask> gameMasks;

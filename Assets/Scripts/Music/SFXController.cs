@@ -8,7 +8,23 @@ public class SFXController : Singleton<SFXController>
     public AudioClip audioClipClick;
     public AudioClip audioClipDrag;
 
-    private AudioSource audioSource;
+    AudioSource _audioSource;
+    private AudioSource audioSource
+    {
+        get
+        {
+            if (_audioSource == null)
+            {
+                _audioSource = gameObject.AddComponent<AudioSource>();
+                _audioSource.loop = false;
+                _audioSource.playOnAwake = false;
+            }
+
+            return _audioSource;
+        }
+
+        set { _audioSource = value; }
+    }
 
     private void Start()
     {

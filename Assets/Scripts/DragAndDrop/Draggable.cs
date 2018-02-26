@@ -18,6 +18,11 @@ namespace jamtasticvol3
         public LayerMask layers;
         public bool snaps;
         public Vector2 snapTo;
+        public Vector2 scale;
+
+        public bool scaleCollider = false;
+        public Vector2 colliderOffset;
+        public Vector2 colliderScale;
 
         Transform _transform;
         Collider2D _collider;
@@ -64,14 +69,22 @@ namespace jamtasticvol3
                 _transform.SetParent(maskContainer);
             }
 
-            SFXController.Instance.PlaySoundDrag();
+            if (SFXController.Instance != null)
+                SFXController.Instance.PlaySoundDrag();
 
-            ((RectTransform)_transform).DOSizeDelta(Vector2.one * 500f, 0.5f).SetEase(Ease.OutElastic).Play();
+            if (scaleCollider)
+            {
+                ((BoxCollider2D)_collider).offset = colliderOffset;
+                ((BoxCollider2D)_collider).size = colliderScale;
+            }
+
+            ((RectTransform)_transform).DOSizeDelta(scale, 0.5f).SetEase(Ease.OutElastic).Play();
         }
 
         void StopDrag()
         {
-            SFXController.Instance.PlaySoundClick();
+            if(SFXController.Instance != null)
+                SFXController.Instance.PlaySoundClick();
 
             Collider2D[] colliders = new Collider2D[numColliders];
             ContactFilter2D contactFilter = new ContactFilter2D();
