@@ -37,6 +37,7 @@ namespace jamtasticvol3
         {
             _transform = GetComponent<Transform>();
             _collider = gameObject.GetComponent<Collider2D>();
+            _collider.enabled = false;
             _image = GetComponent<Image>();
 
             maskContainer = GameObject.Find("MaskContainer").transform as RectTransform;
@@ -68,6 +69,8 @@ namespace jamtasticvol3
 
                 _transform.SetParent(maskContainer);
             }
+
+            _collider.enabled = true;
 
             if (SFXController.Instance != null)
                 SFXController.Instance.PlaySoundDrag();
