@@ -22,6 +22,11 @@ namespace jamtasticvol3.Characters
             }
         }
 
+        public Character GetCharacter(string charName)
+        {
+            return _characters[charName];
+        }
+
         public void AddCharacter(string charName, Character script)
         {
             if (_characters == null)

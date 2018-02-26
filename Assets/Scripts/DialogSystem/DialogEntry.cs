@@ -83,7 +83,11 @@ namespace jamtasticvol3.DialogSystem
                 scroll.normalizedPosition = Vector2.zero;
             }
 
-            if (callNext)
+            /*if(_dialog.type != Dialog.DialogType.SemiEnd && _dialog.type != Dialog.DialogType.End)
+            {
+
+            }
+            else*/ if (callNext)
                 DialogSystem.Instance.DelayedCallDialog(_dialog.callID);
             else
                 _answersCV.DOFade(1f, 1.5f).Play();

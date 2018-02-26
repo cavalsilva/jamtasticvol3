@@ -7,7 +7,6 @@ public class MenuController : MonoBehaviour {
 
     public void LoadScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        Fade.Instance.FadeIn(() => SceneManager.LoadScene(scene));
     }
-
 }

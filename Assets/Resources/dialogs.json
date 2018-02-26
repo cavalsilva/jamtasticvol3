@@ -1,92 +1,516 @@
-﻿[
+[
   {
-    "ID": "0",
+    "ID": "B0",
+    "character": "Biba",
+    "mood": "Happy",
+    "type": "0",
+    "dialog": "Olá que bela loja temos aqui ^^! Estou super empolgada com o carnaval o que você tem pra me oferecer??",
+    "answers": [
+      {
+        "answer": "Olá, Bem-vinda ao nosso pequeno Ateliê, fazemos as mais diversas fantasias com os melhores acessórios e enfeites da região! Tudo confeccionado com produtos sintéticos sem prejudicar nenhum animalzinho! Me diga o que você precisa e faremos o possível para te atender!!",
+        "callID": "B01"
+      }
+    ]
+  },
+  {
+    "ID": "B01",
     "character": "Biba",
     "mood": "Normal",
+    "dialog": "Entendi!! Estou procurando uma fantasia que combine comigo...",
+    "callID": "B02"
+  },
+  {
+    "ID": "B02",
+    "character": "Biba",
+    "mood": "Normal",
+    "dialog": "Gosto bastante de cinza, mas sem muitos tons por favor... haha! Mas queria algo... feliz, que combinasse com o carnaval, mas discreto!",
+    "callID": "B2.1"
+  },
+  {
+    "ID": "B2.1",
+    "character": "Biba",
+    "mood": "Sad",
+    "dialog": "erm... desde que não chame muita atenção... o mais discreto que der...",
+    "answers": [
+      {
+        "answer": "Temos exatamente o que você precisa!!!",
+        "callID": "B22"
+      },
+      {
+        "answer": "Você não parece tão animada quanto falou no começo até parece meio triste...",
+        "callID": "B3"
+      },
+      {
+        "answer": "Ânimo!!! é carnaval, eu sei exatamente da fantasia que você precisa, é a solução pra todos seus problemas!",
+        "callID": "B22"
+      }
+
+    ]
+  },
+  {
+    "ID": "B200",
+    "character": "Biba",
+    "type": "2",
+    "mood": "Special",
+    "dialog": "Isso aí não vamos perder nosso tempo, me passa a fantasia de um guerreiro que eu quero curtir! hhuehuehuehu!"
+  },
+  {
+    "ID": "B3",
+    "character": "Biba",
+    "mood": "Sad",
+    "dialog": "AHH não! eu to animada sim!! to bastante animada.........",
+    "callID": "B31"
+  },
+  {
+    "ID": "B31",
+    "character": "Biba",
+    "mood": "Sad",
+    "dialog": "Eu acho que estou animada sim!... bom eu tenho que escolher uma fantasia este carnaval tem que ser bom...",
+    "answers": [
+      {
+        "answer": "Vou fazer ser bom, não precisa nem falar mais nada, vou montar a sua fantasia e pra melhorar seu dia vai ser por nossa conta!!",
+        "callID": "B22"
+      },
+      {
+        "answer": "Você me parece triste e com muita dúvida sobre como vai ser esse carnaval, eu gostaria de pensar com mais carinho na sua fantasia. Me ajude a entender melhor o que você quer usar.",
+        "callID": "B32"
+      },
+      {
+        "answer": "Se anime!! A vida é muito boa para ficarmos perdendo tempo com tristeza, é carnaval, vamos lá me ajude com a sua fantasia, tenho certeza que você vai gostar do resultado!",
+        "callID": "B22"
+      }
+
+    ]
+  },
+  {
+    "ID": "B22",
+    "character": "Biba",
+    "type": "2",
+    "mood": "Happy",
+    "dialog": "Está certo, vou confiar em você!, por favor faça que eu fique bem feliz nesse carnaval!"
+  },
+  {
+    "ID": "B32",
+    "character": "Biba",
+    "mood": "Special",
+    "dialog": "...",
+    "callID": "B321"
+  },
+  {
+    "ID": "B321",
+    "character": "Biba",
+    "mood": "Special",
+    "dialog": ".........",
+    "callID": "B322"
+  },
+  {
+    "ID": "B322",
+    "character": "Biba",
+    "mood": "Special",
+    "dialog": "Er, está tão claro assim como estou me sentindo??? Realmente não estou muito bem, nunca fui a menina mais popular, nem com mais amigos, nunca nem gostei de carnaval",
+    "callID": "B323"
+  },
+  {
+    "ID": "B323",
+    "character": "Biba",
+    "mood": "Special",
+    "dialog": "ontem na internet acabei conhecendo um menino que me convidou para um bloquinho. Ninguém nunca tinha me convidado pra nada... Mas não me sinto bem, não gosto dessa bagunça, desse barulho, da pegação!",
+    "callID": "B324"
+  },
+  {
+    "ID": "B324",
+    "character": "Biba",
+    "mood": "Sad",
+    "dialog": "Resolvi me fazer de animada e ir para o carnaval, não quero ser a estranha que fica no canto pra sempre. Não quero ficar triste pra sempre. Mas não é tão simples quanto eu gostaria que fosse. Mas ta difícil me animar de verdade não quero que ninguém me veja, às vezes só queria sumir..",
+    "callID": "B325"
+  },
+  {
+    "ID": "B325",
+    "character": "Biba",
+    "mood": "Sad",
+    "dialog": "Mas ao mesmo tempo... Gostaria de ser notada... Acho que sou meio boba, nunca me dei bem com meninos, não sei se vai ser dessa vez que vou conseguir algo. Não sei nem se quero, mas vou criar coragem e vou tentar! ",
+    "callID": "B326"
+  },
+  {
+    "ID": "B326",
+    "character": "Biba",
+    "flags": "B31",
+    "type": "2",
+    "mood": "Normal",
+    "dialog": "Ufa... Acho que foi bom desabafar um pouco... Continuo gostando bastante do cinza, e bom vou confiar em você me faça sua melhor fantasia!! "
+  },
+  {
+    "ID": "BF",
+    "character": "Biba",
+    "mood": "Happy",
+    "dialog": "Obrigada!",
+    "callID": "BF1"
+  },
+  {
+    "ID": "BF1",
+    "character": ".",
+    "type": "3",
+    "mood": "Happy",
+    "dialog": ""
+  },
+  {
+    "ID": "E0",
+    "character": "Enzo",
+    "mood": "Happy",
+    "type": "0",
+    "dialog": "Aeee é carnaval, me arruma a melhor fantasia que você tiver que quero curtir muito",
+    "answers": [
+      {
+        "answer": "Olá, Bem-vind ao nosso pequeno Ateliê, fazemos as mais diversas fantasias com os melhores acessórios e enfeites da região! Tudo confeccionado com produtos sintéticos sem prejudicar nenhum animalzinho! Me diga o que você precisa e faremos o possível para te atender!!",
+        "callID": "E1"
+      }
+    ]
+  },
+  {
+    "ID": "E1",
+    "character": "Enzo",
+    "mood": "Happy",
+    "dialog": "estou muito animado, afinal, tem gente bonita, gente feliz tem que aproveitar!!hhuehuehuehuehhueshuesuHUEHEHU!Afinal, não é todo dia que a gente tem essa liberdade carnavalesca pra conhecer gente diferente.. carnaval é sempre bom pra dar uma variada!!",
+    "answers": [
+      {
+        "answer": "Ta afim de dar uma variada? podemos fazer as melhores fantasias, é só você falar o que precisa que eu tento te ajudar.",
+        "callID": "E2"
+      }
+    ]
+  },
+  {
+    "ID": "E2",
+    "character": "Enzo",
+    "mood": "Special",
+    "dialog": "E variar vai muito além da fantasia, é até da namorada hhuehuehuehu",
+    "answers": [
+      {
+        "answer": "Sério isso?? poxa você deveria dar mais valor a sua namorada, não a conheço mas o mínimo que ela merece é respeito!",
+        "callID": "E200"
+      },
+      {
+        "answer": "Carnaval ta aí pra se curtir. Aproveite mesmo!!",
+        "callID": "E200"
+      },
+      {
+        "answer": "Ta afim de variar não só a fantasia então? erm...Bom eu posso ajudar somente na parte da fantasia!Mas você parece muito disposto a curtir o carnaval.",
+        "callID": "E3"
+      }
+
+    ]
+  },
+  {
+    "ID": "E200",
+    "character": "Enzo",
+    "type": "2",
+    "mood": "Special",
+    "dialog": "Isso aí não vamos perder nosso tempo, me passa a fantasia de um guerreiro que eu quero curtir! hhuehuehuehu!"
+  },
+  {
+    "ID": "E3",
+    "character": "Enzo",
+    "mood": "Sad",
+    "dialog": "Não me entenda mal, eu gosto da minha namorada, mas não ta rolando mais faz um bom tempo. mas ela gosta muito de mim e não sei como simplesmente acabar com isso. E às vezes acabo mentindo pra ela",
+    "callID": "E31"
+  },
+  {
+    "ID": "E31",
+    "character": "Enzo",
+    "mood": "Sad",
+    "dialog": "Queria que fosse mais fácil as coisas.",
+    "answers": [
+      {
+        "answer": "Você não deveria mentir pra ela, a sinceridade é sempre o melhor caminho!",
+        "callID": "E21"
+      },
+      {
+        "answer": "Realmente parece uma situação bem dificil pra você, e você não parece tão confortável pra conversar com ela sobre isso.",
+        "callID": "E32"
+      },
+      {
+        "answer": "Vamos escolher sua fantasia, prefiro não entrar nesses assuntos!",
+        "callID": "E22"
+      }
+
+    ]
+  },
+  {
+    "ID": "E21",
+    "character": "Enzo",
+    "mood": "Angry",
+    "type": "2",
+    "dialog": "You don't say!! Pô, eu sei que não devo mentir., mas não é facil assim... Bom me arruma uma fantasia que quero mais é pular o carnaval! "
+  },
+  {
+    "ID": "E22",
+    "character": "Enzo",
+    "mood": "Sad",
+    "type": "2",
+    "dialog": "Desculpa ter te incomodado com meus pensamentos, hahaha, mas já diria o ditado, vida que segue, quem atrasa tem lag! HUEHUEHUEHUE",
+    "callID": "E211"
+  },
+  {
+    "ID": "E211",
+    "character": "Enzo",
+    "mood": "Normal",
+    "type": "2",
+    "dialog": "Bom me passa uma fantasia que eu quero aproveitar bastante o carnaval, quero uma que mostre toda minha coragem e força!"
+  },
+  {
+    "ID": "E32",
+    "character": "Enzo",
+    "flags": "E32",
+    "mood": "Happy",
+    "type": "2",
+    "dialog": "Sim é bem dificil.. bom sou um cara bem bacana, alegre e contente estou pronto pra fornecer muita paixão por aí. haha, foi bom conversar com você, vou tentar fazer o melhor possível nesse carnaval!!"
+  },
+  {
+    "ID": "EF",
+    "character": "Enzo",
+    "mood": "Happy",
+    "dialog": "Opa valew!",
+    "callID": "EF1"
+  },
+  {
+    "ID": "EF1",
+    "character": ".",
+    "type": "3",
+    "mood": "Happy",
+    "dialog": ""
+  },
+  {
+    "ID": "M0",
+    "character": "Manu",
+    "mood": "Happy",
     "type": "0",
     "dialog": "Olá, estava passando em frente e vi esse ateliê... O quê vocês podem me oferecer?",
     "answers": [
       {
         "answer": "Olá, Bem-vinda ao nosso pequeno Ateliê, fazemos as mais diversas fantasias com os melhores acessórios e enfeites da região! Tudo confeccionado com produtos sintéticos sem prejudicar nenhum animalzinho! Me diga o que você precisa e faremos o possível para te atender!!",
-        "callID": "1"
+        "callID": "M1"
       }
     ]
   },
   {
-    "ID": "1",
-    "character": "Biba",
+    "ID": "M1",
+    "character": "Manu",
     "mood": "Happy",
-    "dialog": "Estou bem animada com  carnaval, adoro me divertir pular e brincar, queria aproveitar bastante esse dia",
+    "dialog": "Adorei!! Estou bem animada com o carnaval, adoro me divertir pular e brincar, queria aproveitar bastante esse dia",
     "answers": [
       {
-        "answer": "E teria algo que eu possa fazer pra manifestar esse seu ânimo em forma de fantasia, me de dicas e tentarei fazer meu melhor",
-        "callID": "2"
+        "answer": "E como posso manifestar esse seu ânimo em forma de fantasia hahaha, me de dicas e tentarei fazer meu melhor!",
+        "callID": "M2"
       },
       {
-        "answer": "Você tem ctz que está animada?? não me parece tão animada assim",
-        "callID": "200"
+        "answer": "Você tem ctz que está animada?? não me parece tão animada assim!",
+        "callID": "M200"
       }
     ]
   },
   {
-    "ID": "2",
-    "character": "Biba",
+    "ID": "M200",
+    "character": "Manu",
+    "type": "2",
     "mood": "Angry",
-    "dialog": "Tem sim, quero a fantasia mais colorida possível, quero pular frevo, dançar cantar, e me divertir, vou para os bloquinhos com meu namorado...uma versão feminina de fantasia seria bem legal. mas ele escolheu a fantasia dele hoje mais cedo. E eu não sei qual é =/, ele não me contou...às vezes acho que ele não me conta muita coisa... ",
-    "callID": "3"
+    "dialog": "Como assim não estou feliz?? pode tratar de fazer a fantasia mais colorida que eu quer pular carnaval!!! "
   },
   {
-    "ID": "3",
-    "character": "Biba",
+    "ID": "M2",
+    "character": "Manu",
+    "mood": "Normal",
+    "dialog": "Tem sim, quero a fantasia mais colorida possível, quero pular frevo, dançar cantar, e me divertir. ",
+    "callID": "M31"
+  },
+  {
+    "ID": "M31",
+    "character": "Manu",
+    "mood": "Normal",
+    "dialog": "Vou para os bloquinhos com meu namorado...uma versão feminina dseria bem legal. ",
+    "callID": "M32"
+  },
+  {
+    "ID": "M32",
+    "character": "Manu",
+    "mood": "Sad",
+    "dialog": "Mas ele escolheu a fantasia dele hoje mais cedo e eu não sei qual é =/, ele não me contou...às vezes acho que ele não me conta muita coisa... ",
+    "callID": "M3"
+  },
+  {
+    "ID": "M3",
+    "character": "Manu",
     "mood": "Sad",
     "dialog": "Uma pena, pq sempre tento contar tudo pra ele gosto muito dele... mas ultimamente ele parece tão diferente. bom vamos deixar isso de lado.",
     "answers": [
       {
         "answer": "Ahh acho que sei quem é seu namorado, ele esteve aqui mais cedo... realmente não sei se ele te conta tudo melhor você prestar mais atenção nisso... não sei se é legal vc ir de par com ele...",
-        "callID": "4"
+        "callID": "M401"
       },
       {
         "answer": "Ta, acho que já entendi do que você precisa, talvez eu consiga te surpreender, mas não aprendi muito de vidência ainda... hahahaha ^^ ",
-        "callID": "4"
+        "callID": "M403"
       },
       {
         "answer": "Você parece um pouquinho chateada com seu relacionamento, mas se você não se sente confortável pra falar sobre isso, vamos focar na sua fantasia! ^^",
-        "callID": "4"
+        "callID": "M4"
       }
     ]
   },
   {
-    "ID": "4",
-    "character": "Biba",
+    "ID": "M4",
+    "character": "Manu",
     "mood": "Sad",
-    "dialog": "Ahh quanto a fantasia pode ser criativa me surpreenda! não tem problemas quanto a isso",
-    "callID": "5"
+    "dialog": "Ahh sendo sincera realmente estou bem chateada, faz tempo que ele não me da atenção. Eu sempre tento dar amor e carinho, óbvio que nem sempre é o ideal, mas às vezes acabo ficando em dúvida sobre o que sinto.",
+    "callID": "M5"
   },
   {
-    "ID": "5",
+    "ID": "M401",
+    "character": "Manu",
+    "mood": "Sad",
+    "dialog": "Você está me falando que não devo confiar no meu namorado??? Como se ele tivesse vindo aqui e contado um monte de coisas pra você???",
+    "callID": "M4012"
+  },
+  {
+    "ID": "M4012",
+    "character": "Manu",
+    "type": "2",
+    "mood": "Sad",
+    "dialog": "E mesmo que seja essa a questão, esse é o problema das pessoas, a gente sente confiança e um segundo depois a pessoa quer se ver livre do problema que arrumou... bom... Me traga sua melhor fantasia vou pular bastante o carnaval e acho que não precisamos conversar mais!"
+  },
+  {
+    "ID": "M403",
+    "character": "Manu",
+    "type": "2",
+    "mood": "Happy",
+    "dialog": "Ta certo, me traga sua melhor fantasia!"
+  },
+
+  {
+    "ID": "M5",
+    "character": "Manu",
+    "mood": "Special",
+    "dialog": "Sinceramente... Eu ando em dúvidas sobre muitas coisas, sou feliz, mas não sei se faço aquilo que queria",
+    "callID": "M51"
+  },
+  {
+    "ID": "M51",
+    "character": "Manu",
+    "mood": "Special",
+    "dialog": "Com ele me sinto presa, parece que não consigo ser quem eu realmente quero...",
+    "callID": "M52"
+  },
+  {
+    "ID": "M52",
+    "character": "Manu",
+    "flags": "M52",
+    "Type": "2",
+    "mood": "Special",
+    "dialog": "Mas bom vamos falar de fantasia, acho que estou disposta a mudar... Talvez eu até abra mão da minha fantasia multicolorida... me surpreenda!"
+  },
+  {
+    "ID": "MF",
+    "character": "Manu",
+    "mood": "Happy",
+    "dialog": "Obrigada!",
+    "callID": "MF1"
+  },
+  {
+    "ID": "MF1",
+    "character": ".",
+    "type": "3",
+    "mood": "Happy",
+    "dialog": ""
+  },
+  {
+    "ID": "F0",
     "character": "Biba",
     "mood": "Happy",
-    "dialog": "Mussum Ipsum...",
-    "callID": "6"
+    "type": "0",
+    "dialog": "Oi vim devolver a fantasia",
+    "callID": "F01"
   },
   {
-    "ID": "6",
-    "type": "2",
+    "ID": "F01",
     "character": "Biba",
-    "mood": "Normal",
-    "dialog": "Hãaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.",
-    "answers": [
-      {
-        "answer": "Oi? Quem é você?",
-        "callID": "0"
-      }
-    ]
+    "mood": "Happy",
+    "dialog": "Muito obrigada, pelo que fez por mim, se não fosse por você eu não conseguiria ter superado esse carnaval tão feliz assim!!",
+    "callID": "F02"
   },
   {
-    "ID": "200",
+    "ID": "F02",
+    "character": "Manu",
+    "mood": "Happy",
+    "dialog": "Olá, vim devolver a fantasia também",
+    "callID": "F03"
+  },
+  {
+    "ID": "F03",
     "character": "Biba",
+    "mood": "Happy",
+    "dialog": "E se não fosse por você eu não teria conhecido a Manú, que foi muito mais que uma amizade pra me consolar nesse carnaval!",
+    "callID": "F04"
+  },
+  {
+    "ID": "F04",
+    "character": "Manu",
+    "mood": "Happy",
+    "dialog": "Sim foi muito bom conhecer a Biba também, agradecemos muito a sua fantasia, e conversamos muito sobre você, além de ser uma ótima pessoa é um excelente profissional",
+    "callID": "F05"
+  },
+  {
+    "ID": "F05",
+    "character": "Enzo",
+    "mood": "Happy",
+    "dialog": "...",
+    "callID": "F06"
+  },
+  {
+    "ID": "F06",
+    "character": "Enzo",
+    "mood": "Happy",
+    "dialog": "E ae, vim devolver a fantasia, foi muito bom tudo que conversei com você, me deu forças pra fazer a coisa certa! Acho que consegui resolver todas minhas pendências e estou bem mais leve, muito obrigado!",
+    "callID": "FF"
+  },
+  {
+    "ID": "F1",
+    "character": "Manu",
+    "mood": "Happy",
+    "type": "0",
+    "dialog": "Olá viemos devolver as fantasias!",
+    "callID": "F11"
+  },
+  {
+    "ID": "F11",
+    "character": "Enzo",
+    "mood": "Special",
+    "dialog": "Sim essas fantasias renderam mta coisa divertida",
+    "callID": "F12"
+  },
+  {
+    "ID": "F12",
+    "character": "Manu",
     "mood": "Sad",
-    "dialog": "Estou bem animada sim! Oras, por favor me traga sua fantasia mais colorida!!",
-    "callID": "6"
+    "dialog": "Sim realmente...Obrigada",
+    "callID": "F13"
+  },
+  {
+    "ID": "F13",
+    "character": "Enzo",
+    "mood": "Happy",
+    "dialog": "é isso aí Muito obrigado por tudo!!",
+    "callID": "F14"
+  },
+  {
+    "ID": "F14",
+    "character": ".",
+    "mood": "Happy",
+    "dialog": "E naquele carnaval, nem todos os clientes, devolveram suas fantasias. Bem que percebeu-se que uma  das gorjetas tinha sido acima das expectativas",
+    "callID": "FF"
+  },
+  {
+    "ID": "FF",
+    "character": ".",
+    "type": "4",
+    "mood": "Happy",
+    "dialog": ""
   }
 ]

@@ -38,12 +38,19 @@ namespace jamtasticvol3.DialogSystem
             switch(newDialog.type)
             {
                 case Dialog.DialogType.End:
+                    CharacterManager.Instance.ShowCharacter(newDialog.character);
                     GameManager.Instance.NewMask();
                     break;
                 case Dialog.DialogType.Start:
                 case Dialog.DialogType.Default:
+                case Dialog.DialogType.SemiEnd:
                     DialogEntry de = Instantiate(containerPrefab, dialogsContainer).GetComponent<DialogEntry>();
                     de.Init(newDialog);
+
+                    if(!string.IsNullOrEmpty(newDialog.flags))
+                    {
+                        GameManager.Instance.AddFlag(newDialog.flags);
+                    }
 
                     if (!string.IsNullOrEmpty(newDialog.character))
                     {
@@ -54,6 +61,7 @@ namespace jamtasticvol3.DialogSystem
                     }
                     break;
                 default:
+                    GameManager.Instance.GameEnd();
                     break;
             }
         }
@@ -87,12 +95,13 @@ namespace jamtasticvol3.DialogSystem
     [Serializable]
     public class Dialog
     {
-        public enum DialogType { Start = 0, Default = 1, End = 2 }
+        public enum DialogType { Start = 0, Default = 1, SemiEnd = 2, End = 3, EndEnd = 4 }
         public enum Mood { Normal, Happy, Sad, Angry, Special }
 
         public string ID;
         public string character;
         public string mood;
+        public string flags;
         public DialogType type = DialogType.Default;
         public string dialog;
         public List<Answer> answers;
