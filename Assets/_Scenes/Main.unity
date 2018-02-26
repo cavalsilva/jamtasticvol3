@@ -1508,7 +1508,7 @@ MonoBehaviour:
     m_Bits: 512
   snaps: 0
   snapTo: {x: 0, y: 0}
-  scale: {x: 107, y: 123}
+  scale: {x: 100, y: 100}
   scaleCollider: 0
   colliderOffset: {x: 0, y: 0}
   colliderScale: {x: 0, y: 0}
@@ -2525,7 +2525,7 @@ MonoBehaviour:
     m_Bits: 512
   snaps: 0
   snapTo: {x: 0, y: 0}
-  scale: {x: 97, y: 110}
+  scale: {x: 100, y: 100}
   scaleCollider: 0
   colliderOffset: {x: 0, y: 0}
   colliderScale: {x: 0, y: 0}
@@ -3939,7 +3939,7 @@ MonoBehaviour:
     m_Bits: 512
   snaps: 0
   snapTo: {x: 0, y: 0}
-  scale: {x: 106, y: 28}
+  scale: {x: 100, y: 100}
   scaleCollider: 0
   colliderOffset: {x: 0, y: 0}
   colliderScale: {x: 0, y: 0}
